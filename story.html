@@ -1,0 +1,216 @@
+<html>
+    <head> <title>Class Activity 1</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+      
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+        <link rel="icon" type="image/x-icon" href="Logo_last.png">
+      
+        <style>
+          
+          #storydiv { 
+                height: 100%;
+                position: relative;         
+              }
+                      
+            #storydiv p {
+                margin: 0;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                -ms-transform: translate(-50%, -50%);
+                transform: translate(-50%, -50%);
+            }
+            
+            .maindiv{
+                border:5px ridge rgb(12, 96, 206);
+                margin:1%;
+                border-radius:20px
+            }
+
+            p{
+                font-size:30px;
+                font-weight: bold;
+            }
+
+           
+
+            #nextbtn, #backbtn, #newbtn{
+                width: 25%;
+                font-size:20px;
+                margin-right: 5%;
+                position: relative;
+                
+            }
+
+            #backbtn, #newbtn{
+                display:none;
+            }
+
+            #family{
+                width:95%;
+                height:95%;
+            }
+
+            #about{
+                font-weight: bold;
+                font-size:40px;
+                color:rgb(7, 7, 89)
+            }
+
+            #story{ 
+                font-size: 1.35vw;
+                border-radius: 20px;
+            }
+
+            #imgdiv{
+                position:relative;
+            }
+         
+        
+        </style>
+</head>
+
+    <body> 
+        <div class="header" style="width:100%; box-shadow:5px 5px 10px rgb(0, 0, 0); padding-bottom:10px;">
+            <img src="Logo.png" width="5%" style="float:left; margin-top:25px;" class="img-responsive">
+            <span> <img src="header.png" width="30%" height="100px" class="img-responsive"></span>
+        </div>
+         <br>   
+        <br>
+        
+        <center>
+            <h2 id="about">Sounds</h2>
+            <div class="maindiv container-fluid" style="height:60%;">
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11 imgdiv">
+                   <img id="family" src="2.jpg" style="width:100%;"> 
+               </div>
+               <div class="col-lg-6 col-md-6 col-sm-6 col-xs-11" id='storydiv'>
+                   <p id="story" style="text-align:left; width:100%;"> 
+
+                    <span style="color: blue;">Vowels </span> are the letters <span style="color: blueviolet;font-style: italic;"> A, E, I, O, </span> and <span style="color: blueviolet;font-style: italic;"> U</span>, and they have their own special sounds
+                    that make them super important in every word we say. <br><br>
+
+                    Now, let's talk about short and long vowels. <span style="color: brown;"> Short vowels </span> are like sprinters – they
+                    say their sounds quickly, like in the words <audio src="Assets/cat.mp3"></audio> 'cat,' 'met,' 'sit,' 'dot,' and 'rug.'<br><br>
+
+                    <span style="color: darkgreen;">Long vowels</span>, on the other hand, are like marathon runners – they stretch out
+                    their sounds, like in the words 'cake,' 'meet,' 'kite,' 'rose,' and 'cube.'
+                    
+
+               
+                
+
+       
+
+
+                </p> 
+            </div>
+        </center>     
+        </div>
+        <br>
+        <div class="" style="text-align:center;">
+            
+            <button id="backbtn" onclick="backpic()" class="btn btn-success">Back</button>
+            <button id="nextbtn" onclick="update()" class="btn btn-success">Continue</button> 
+        </div>
+
+        
+            
+
+        </center>   
+
+        <script>
+
+            var images = ["Assets/1.jpg", "Assets/2.jpg", "Assets/3.jpg", "Assets/4.jpg", "Assets/5.jpg", "Assets/6.jpg","Assets/7.jpg","Assets/8.jpg","Assets/9.jpg","Assets/10.jpg","Assets/11.jpg","Assets/12.jpg","Assets/13.jpg","Assets/14.jpg","Assets/15.jpg","Assets/16.jpg","Assets/17.jpg"];
+
+            var para=[  "But wait, there's more! Sometimes, vowels team up with the letter 'r' to make a special kind of sound called an ' <span style='color: blue;'>r-controlled vowel</span>.' <br><br> It's like the 'r' is the boss, telling the vowel how to sound. <br><br> <span style='background-color: yellow;color:blue:'>For example</span>, in the words 'car,' 'her,' 'bird,' 'form,' and 'turn,' the vowels have a unique sound because of the 'r' that follows them. <br><br> Well, it’s story time now.......",
+                
+                       "Once upon a time, in a small and cosy burrow, there lived a little hamster named Henry. Henry loved to sleep, but most of all, he loved to dream. Every night, as he nestled down in his soft bed of hay, he closed his eyes and let his mind take him on the most incredible adventures.",
+
+                        " In this sentence, we can find: <br><br> ● &nbsp; Short 'o' sound in 'once' and 'cosy' <br> ● &nbsp; Short 'u' sound in 'burrow' <br> ● &nbsp; Short 'i' sound in 'little' <br> ● &nbsp; Short 'e' sound in 'Henry'",
+
+                        "  <span style='background-color: yellow;color: blue;'>For example</span>, let's look at the word   <span style='color: blueviolet;font-style:italic;'>'cat'</span> The vowel sound you hear in 'cat' is a short 'a' sound. <br><br> It's a quick, brief sound because it's followed by the consonant 't.' The same goes for words like 'met,' 'sit,' 'dot,' and 'mug' – the vowel sounds are short because they're followed by consonants. <br><br> Repeat all of these words:   <span style='font-weight:bolder;'> Cat, Mug, Sit, Dot, Met </span> <br><br>Can you hear how the “vowel sound” was so short in these words?",
+
+                        "One night, as Henry drifted off to sleep, he found himself in a magical forest. The trees were tall and shimmering, and the leaves rustled softly in the breeze. Henry felt a warm sunbeam on his face and looked up to see the most stunning rainbow in the sky.",
+
+                        "In this sentence, we can find: <br><br> ● The long 'i' sound in 'night' <br> ● The long 'e' sound in 'sleep' <br> ● The long 'ou' sound in 'found' <br><br>These are called long vowel sounds.",
+
+                        " <span style='background-color: yellow;color: blue;'>For example</span>, in the word 'cake,'the vowel sound you hear is a long 'a' sound,pronounced as 'ay.' This is different from the short 'a' sound in the word 'cat,'which is pronounced quickly and briefly.  <br><br> Did you notice any difference while pronouncing it? <br><br>  <span style='background-color: yellow;color: blue;'> For example</span>: <br> ● Vowel <span style='color:blueviolet;font-style:italic;'> “i” </span> in the word “ <span style='font-weight: bolder;'>blind</span>” <br> ● Vowel <span style='color:blueviolet;font-style:italic;'>“u” </span> in the word “ <span style='font-weight: bolder;'>cumin</span>” <br> ● Vowel  <span style='color:blueviolet;font-style:italic;'>“o” </span> in the word “ <span style='font-weight: bolder;'>note</span>” <br> <br> While pronouncing all these words, you can notice that the sound of the vowel is extended for a longer duration, which is not the case in words like 'cat,' 'truck,' and 'pit,' where the sound of the vowel is quick.",
+
+                        "Now we will see a list of words with vowels and without vowels. <br><br><b> <span style='font-weight: bolder;'>Vowels </span> </b> are: a, e, i, o and u. <br><b> <span style='font-weight: bolder;'>Consonants  </span> </b> are the rest of the letters in the alphabet: b, c, d, f, g, h, j, k, l, m, n,p, q, r, s, t, v, w, x, y and z. <br><br><span style='color: blue;'>That means words with only consonants are equal to words with no vowels.</span>",
+
+                        " <img src='8th.jpg' width='100%' alt=''>",
+
+
+                        "As Henry explored this new world, he came across a little rabbit who was crying.Henry asked the rabbit what was wrong, and the rabbit explained that he had lost his way and didn’t know how to get back home. Without hesitation, Henry offered to help the rabbit find his way back. <br><br> They walked for what seemed like hours, and just when the rabbit was about to give up hope, they came across a field of flowers. The flowers were so colourful and smelled so sweet that the rabbit’s tears turned into a smile. With the help of the flowers, the rabbit was able to remember the way back home, and he thanked Henry for his help.",
+
+                        "Let's dive into the paragraph and see if we can find these special vowel-r combinations. <br><br>  '<span style='color: blue;font-style:italic;'>As Henry explored this new world, he came across a little rabbit who was crying.</span>' <br><br> In this sentence, we can spot the 'r-controlled vowel' in the word 'across' – the  <span style='color: blueviolet;font-style:italic;'>'a'</span> sound is influenced by the 'r' that follows it.",
+
+                        "Let’s understand it in a more easy language with fun examples. <br><br>'When you see the letters   <span style='color: blue;font-style: italic;'>'i', 'e', or 'u' </span> sitting right next to the letter 'r', like in the words ' <span style='color: blueviolet;'>bird</span>', 'her', or 'turn', they make a special sound together. <br><br> It's like they're best friends, and they say 'er' together. <br><br> Can you practice saying those words with me? <br> 'Bird', 'her', 'turn'.",
+
+                        "Now, when you see the letters 'a' or 'o' sitting next to the letter 'r', like in the words 'car' or 'fork', they also make the sound of ‘ar’ and ‘or’. <br><br> But if the 'a' or 'o' is not sitting right next to the 'r', like in the word 'parade', then they make their regular sound first, and then you hear the 'r' sound after it.",
+                    
+
+                    ]
+            
+
+
+
+                    var i = -1;
+            function update(){
+                i++
+                document.getElementById("backbtn").style.display="inline-block"
+                if(i > para.length-1){
+                    document.getElementById("nextbtn").style.display="none"
+                    document.getElementById("family").src = "last.jpg";
+                    document.getElementById("story").style.borderLeftStyle="solid"
+                    document.getElementById("story").style.borderLeftColor="rgb(164, 246, 229)"
+                    document.getElementById("about").innerHTML = "A Little Hamster Named Henry";
+                    document.getElementById("story").innerHTML = "<img src='last part.jpg' width='100%' alt=''>"
+                }
+                else{
+                    document.getElementById("story").style.fontSize="1.35vw"
+                    document.getElementById("story").style.backgroundColor="white"
+                    document.getElementById("about").innerHTML="A Little Hamster Named Henry"
+                     var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+              
+            }
+            };
+
+           
+
+            function backpic(){
+                i=i-1
+                console.log(i)
+
+                if(i<0){
+                    document.getElementById("story").style.fontSize="1.35vw"
+                    document.getElementById("backbtn").style.display="none"
+                    document.getElementById("nextbtn").style.display="inline-block"
+                    document.getElementById("family").src = "2.jpg";
+                    document.getElementById("about").innerHTML="Adverbs and its types"
+                    document.getElementById("story").innerHTML = "   <span style='color: blue;'>Vowels </span> are the letters <span style='color: blueviolet;font-style: italic;'> A, E, I, O, </span> and <span style='color: blueviolet;font-style: italic;'> U</span>, and they have their own special sounds that make them super important in every word we say. <br><br>     Now, let's talk about short and long vowels. <span style='color: brown;'> Short vowels </span> are like sprinters – they say their sounds quickly, like in the words 'cat,' 'met,' 'sit,' 'dot,' and 'rug.'<br><br><span style='color: darkgreen;'>Long vowels</span>, on the other hand, are like marathon runners – they stretch out their sounds, like in the words 'cake,' 'meet,' 'kite,' 'rose,' and 'cube.' "
+                }
+                else{
+                document.getElementById("story").style.fontSize="1.25vw"
+                document.getElementById("story").style.backgroundColor="white"
+                document.getElementById("nextbtn").style.display="inline-block"
+                document.getElementById("about").innerHTML="A Little Hamster Named Henry"
+                var updated_image = images[i]; 
+                var newpara =para[i];
+                document.getElementById("family").src = updated_image;
+                document.getElementById("story").innerHTML = newpara;
+                }
+            }
+
+    
+    </script>
+        
+    </body>
+</html>
